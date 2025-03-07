@@ -1,0 +1,6 @@
+# ninja log v5
+0	224	1714480176810789974	CMakeFiles/course_student_aggregation.dir/main.cpp.o	8492e6829354e057
+0	238	1714480176825543835	CMakeFiles/course_student_aggregation.dir/Header.cpp.o	d4602e12c99922ee
+238	266	1714480176854659855	course_student_aggregation	9d4f649831bf339e
+1	188	1714480193885182057	CMakeFiles/course_student_aggregation.dir/Header.cpp.o	d4602e12c99922ee
+188	217	1714480193914510240	course_student_aggregation	9d4f649831bf339e

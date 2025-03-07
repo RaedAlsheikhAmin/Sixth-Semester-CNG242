@@ -1,0 +1,20 @@
+-- Unitree function
+unitree :: [(String, Integer)] -> [Integer] -> UniTree
+unitree [] _ = EmptyTree 
+unitree _ []= EmptyTree
+unitree ((name, emp):restNames) (numChildren:restChildren) = Node (name, emp) numChildren (helper restNames restChildren emp)
+
+-- Helper function
+helper :: [(String, Integer)] -> [Integer] -> Integer -> [UniTree]
+helper [] _ _ = []
+helper _ [] _ = []
+helper ((name, emp):restNames) (numChildren:restChildren) x
+    | x > 1 && numChildren == 0 =
+        [Node (name, emp) numChildren [EmptyTree]] ++ helper restNames restChildren (x - 1)
+    | x > 1 && numChildren == 1 =
+        [Node (name, emp) numChildren (helper restNames restChildren numChildren)] ++
+        helper (tail restNames) (tail restChildren) (head (tail restChildren))
+    | x > 0 && numChildren /= 0 =
+        [Node (name, emp) numChildren (helper restNames restChildren numChildren)]
+    | otherwise =
+        [Node (name, emp) numChildren [EmptyTree]]

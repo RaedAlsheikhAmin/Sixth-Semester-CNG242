@@ -1,0 +1,61 @@
+//
+// Created by labuser on 4/5/2024.
+//
+#include <iostream>
+#include "Rectangle.h"
+using namespace std;
+Rectangle::Rectangle(float length, float width) : length(length), width(width) {}
+
+Rectangle::Rectangle(){}
+
+Rectangle::~Rectangle() {
+
+}
+
+float Rectangle::getLength() const {
+    return length;
+}
+
+void Rectangle::setLength(float length) {
+    if(length>0.0 && length <20.00)
+        Rectangle::length = length;
+
+}
+
+float Rectangle::getWidth() const {
+    return width;
+}
+
+void Rectangle::setWidth(float width) {
+    if(width>0.0 && width <20.00)
+        Rectangle::width = width;
+}
+
+char Rectangle::getFillCharacter() const {
+    return FillCharacter;
+}
+
+void Rectangle::setFillCharacter(char fillCharacter) {
+    FillCharacter = fillCharacter;
+}
+
+char Rectangle::getBoarderchar() const {
+    return boarderchar;
+}
+
+void Rectangle::setBoarderchar(char boarderchar) {
+    Rectangle::boarderchar = boarderchar;
+}
+void Rectangle::displayRectangle() {
+   int i,j;
+   for(i=1;i<=this->getLength();i++){
+       for(j=1;j<=getWidth();j++)
+       {
+           if(i==1 || i== this->getLength() || j==1 || j==this->getWidth())
+                        cout<<this->getBoarderchar();
+           else
+               cout<<this->getFillCharacter();
+       }
+       cout<<endl;
+}
+}

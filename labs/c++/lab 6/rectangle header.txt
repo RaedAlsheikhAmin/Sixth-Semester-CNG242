@@ -1,0 +1,45 @@
+//
+// Created by labuser on 4/5/2024.
+//
+
+#ifndef UNTITLED_RECTANGLE_H
+#define UNTITLED_RECTANGLE_H
+using namespace std;
+
+class Rectangle {
+private:
+    float length=1.0;
+    float width=1.0;
+    char FillCharacter='-';
+    char boarderchar='*';
+public:
+    Rectangle(float length, float width);
+    Rectangle();
+
+    virtual ~Rectangle();
+
+    float getLength() const;
+
+    void setLength(float length);
+
+    float getWidth() const;
+
+    void setWidth(float width);
+
+    float perimeter(float,float);
+    float area(float,float);
+
+    char getFillCharacter() const;
+
+    void setFillCharacter(char fillCharacter);
+
+    char getBoarderchar() const;
+
+    void setBoarderchar(char boarderchar);
+
+    void displayRectangle();
+
+};
+
+
+#endif //UNTITLED_RECTANGLE_H

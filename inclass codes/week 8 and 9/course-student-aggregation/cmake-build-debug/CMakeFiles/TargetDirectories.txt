@@ -1,0 +1,3 @@
+/Users/seraslan/Desktop/CNG242-L9/course-student-aggregation/cmake-build-debug/CMakeFiles/course_student_aggregation.dir
+/Users/seraslan/Desktop/CNG242-L9/course-student-aggregation/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/seraslan/Desktop/CNG242-L9/course-student-aggregation/cmake-build-debug/CMakeFiles/rebuild_cache.dir
